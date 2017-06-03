@@ -197,7 +197,7 @@ Example:
       },
 
       ready: function(){
-        setInterval(this._updateFormattedDateMoment(), 1000).bind(this);
+        setInterval(this._updateRelativeTime(), 1000).bind(this);
       },
 
       _dateChanged: function (newVal) {
@@ -243,9 +243,11 @@ Example:
       },
 
       _updateRelativeTime: function() {
+
         if (this.formattedDateMoment) {
           if (this.fromNow) {
             this._setRelativeTime(this.formattedDateMoment.fromNow());
+            console.log('updating time', this.formattedDateMoment.fromNow());
           } else if (this.toNow) {
             this._setRelativeTime(this.formattedDateMoment.toNow());
           } else if (this.calendarTime) {
