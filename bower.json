@@ -14,11 +14,11 @@
   ],
   "main": "moment-js.html",
   "license": "MIT",
-  "homepage": "https://github.com/saeidzebardast/moment-js/",
+  "homepage": "https://github.com/swarmcity/moment-js/",
   "ignore": [
     "/.*",
     "/test/"
-  ],
+  ],      
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
     "moment": "^2.2.1"
