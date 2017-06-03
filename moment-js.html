@@ -175,6 +175,14 @@ Example:
         },
 
         /**
+          * Make the time update itself every x *
+          */
+        realtime: {
+          type: Boolean,
+          value: false
+        },
+
+        /**
          * Indicate moment is loaded and ready to use.
          */
         isMomentReady: {
@@ -186,6 +194,10 @@ Example:
 
       listeners: {
         'moment-is-ready': '_momentIsReady'
+      },
+
+      ready: function(){
+        setInterval(this._updateFormattedDateMoment(), 1000).bind(this);
       },
 
       _dateChanged: function (newVal) {
