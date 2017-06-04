@@ -197,7 +197,7 @@ Example:
       },
 
       ready: function(){
-        setInterval(this._updateRelativeTime(), 1000).bind(this);
+        setInterval(this._updateRelativeTime().bind(this), 1000);
       },
 
       _dateChanged: function (newVal) {
